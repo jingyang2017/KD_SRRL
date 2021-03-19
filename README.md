@@ -1,6 +1,7 @@
 # 
 ## paper
-[Knowledge distillation via softmax regression representation learning(ICLR2021)](https://openreview.net/pdf?id=ZzwDy_wiWv)
+[Knowledge distillation via softmax regression representation learning](https://openreview.net/pdf?id=ZzwDy_wiWv)
+
 Jing Yang, Brais Martinez, Adrian Bulat, Georgios Tzimiropoulos
 
 ## Requirements
@@ -9,15 +10,25 @@ Jing Yang, Brais Martinez, Adrian Bulat, Georgios Tzimiropoulos
 
 ## ImageNet Training
 ```python train_imagenet_distillation.py --net_s resnet18S --net_t resnet34T ```
+
 ```python train_imagenet_distillation.py --net_s MobileNet --net_t resnet50T ```
 
 ## Citation
 ```
-@inproceedings{kd_srrl, 
+@inproceedings{yang2021knowledge, 
   title={Knowledge distillation via softmax regression representation learning},
   author={Jing Yang, Brais Martinez, Adrian Bulat, Georgios Tzimiropoulos},
   booktitle={ICLR2021},
   year={2021}  
+}
+```
+
+```
+@article{yang2020knowledge,
+  title={Knowledge distillation via adaptive instance normalization},
+  author={Yang, Jing and Martinez, Brais and Bulat, Adrian and Tzimiropoulos, Georgios},
+  journal={arXiv preprint arXiv:2003.04289},
+  year={2020}
 }
 ```
 
