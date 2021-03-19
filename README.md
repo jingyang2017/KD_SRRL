@@ -1,5 +1,5 @@
-# 
-## paper
+# SRRL
+## Paper
 [Knowledge distillation via softmax regression representation learning](https://openreview.net/pdf?id=ZzwDy_wiWv)
 
 Jing Yang, Brais Martinez, Adrian Bulat, Georgios Tzimiropoulos
