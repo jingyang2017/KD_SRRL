@@ -4,6 +4,11 @@
 
 Jing Yang, Brais Martinez, Adrian Bulat, Georgios Tzimiropoulos
 
+## Method
+<div align="center">
+    <img src="overview.png" width="600px"</img> 
+</div> 
+
 ## Requirements
 - Python >= 3.6
 - PyTorch >= 1.0.1
