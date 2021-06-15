@@ -20,14 +20,12 @@ parser.add_argument('--weight_decay', type=float, default=1e-4, help='weight dec
 # net and dataset choosen
 parser.add_argument('--net_s', type=str, required=True, choices=['resnet18S', 'MobileNet'], help='')
 parser.add_argument('--net_t', type=str, required=True, choices=['resnet34T', 'resnet50T'], help='')
-
-# 0.5 for ce and 0.9 for kd
+parser.add_argument('--weight', type=float, default=1, help='weight for kd loss')
 def main():
     global args
     args = parser.parse_args()
     cur_path = os.path.abspath(os.curdir)
-    save_path = cur_path.replace('KD_SRRL', 'Results') + '/ImageNet_AB/' + \
-                str(args.mode) + 'T:' + str(args.net_t) + 'S:' + str(args.net_s) + '_weight:' + str(args.weight)+'_lr'+str(args.lr)
+    save_path = cur_path.replace('KD_SRRL', 'Results') + '/ImageNet/' +'T:' + str(args.net_t) + 'S:' + str(args.net_s) + '_weight:' + str(args.weight)+'_lr'+str(args.lr)
     print(save_path)
     model_file = os.path.join(save_path, 'models')
     if not os.path.exists(model_file):
