@@ -114,10 +114,10 @@ def train(train_loader,net_t,net_s,optimizer, conector,epoch):
         feat_s = conector(feat_s)
         loss_stat = statm_loss(feat_s, feat_t.detach())
         pred_sc = net_t(x=None,feat_s=feat_s)
-        loss_kd = loss_stat + F.mse_loss(pred_sc, pred_t)
+        loss_kd = loss_stat + F.mse_loss(pred_sc, pred_t)*args.weight
         loss_ce = F.cross_entropy(pred_s, target)
 
-        loss = loss_ce+loss_kd*args.weight
+        loss = loss_ce+loss_kd
         prec1, prec5 = accuracy(pred_s, target, topk=(1,5))
         optimizer.zero_grad()
         loss.backward()
