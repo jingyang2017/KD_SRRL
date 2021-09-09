@@ -17,6 +17,8 @@ Jing Yang, Brais Martinez, Adrian Bulat, Georgios Tzimiropoulos
 ```python train_imagenet_distillation.py --net_s resnet18S --net_t resnet34T ```
 
 ```python train_imagenet_distillation.py --net_s MobileNet --net_t resnet50T ```
+## log
+https://drive.google.com/drive/folders/19OnwUad63-ITXL2TxguRdyP0KtKJIfgI
 
 ## Citation
 ```
